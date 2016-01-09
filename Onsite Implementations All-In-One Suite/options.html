@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head><title>Options | Onsite All-In-One</title></head>
+<body>
+
+<div id="loadingDiv">Loading options, please wait.</div>
+<div id="mainDiv" style="display:none;">
+	<table style="margin:0px auto;">
+		<tr><th>
+			Select the tabs to be opened for new tasks.
+		</th></tr>
+		<tr><td><label>
+			<input type="checkbox" id="customerAccountOpen">
+			Customer Account
+		</label></td></tr>
+		<tr><td><label>
+			<input type="text" id="customerSiteOpen" maxlength="1" size="1">
+			Customer Site (How many tabs?)
+		</label></td></tr>
+		<tr><td><label>
+			<input type="checkbox" id="taskFileOpen">
+			Task File
+		</label></td></tr>
+		<tr><td><label>
+			<input type="checkbox" id="customerLoginOpen">
+			Customer CMS/Hosting Login 
+		</label></td></tr>
+		<tr><td><label>
+			<input type="checkbox" id="gwmtOpen">
+			Google WMT Login (Incognito)
+		</label></td></tr>
+		<tr><td><label>
+			<input type="checkbox" id="gaOpen">
+			Google Analytics Login (Incognito)
+		</label></td></tr>
+		<tr><td><label>
+			<input type="text" id="nameText" maxlength="20" size="20">
+			Please enter your name.(To be used on workblock signatures.)
+		</label></td></tr>
+		<tr><td style="text-align:center;">
+			<br>
+			<button id="save">Save</button>
+			<div id="status"></div>
+		</td></tr>
+	</table>
+</div>
+
+<script src="options.js"></script>
+</body>
+</html>

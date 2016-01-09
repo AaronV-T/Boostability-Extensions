@@ -1,0 +1,48 @@
+{
+	"manifest_version": 2,
+
+	"name": "Onsite Implementations All-In-One Suite",
+	"description": "Tools for the Onsite Implementation team. Created by Aaron T.",
+	"version": "1.0.7",
+ 
+	"background": {
+		"scripts": [
+			"background.js", 
+			"copyBackground.js"
+		]
+	},
+	"browser_action": {
+	  "default_icon": {                    
+		"19": "images/icon19.png",           
+		"38": "images/icon38.png"           
+	  },
+	  "default_title": "",   
+	  "default_popup": "popup.html"        
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["loginCredentials.js"]
+		},
+		{
+			"matches": ["*://*.launchpad.boostability.com/*"],
+			"js": ["lpContent.js"]
+		},
+		{
+			"matches": ["*://docs.google.com/a/boostability.com/*"],
+			"js": ["formContent.js"]
+		}
+	],
+	"icons": { 
+		"16": "images/icon16.png",
+		"48": "images/icon.png"
+	},
+	"options_page": "options.html",
+	"permissions": [
+		"activeTab",
+		"storage",
+		"tabs"
+	]
+
+	
+}

@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+
+	"name": "Launchpad Customer Lookup",
+	"description": "Searches Launchpad for a customer ID and opens the account if it exists. Created by Aaron T.",
+	"version": "1.1.5",
+ 
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.launchpad.boostability.com/*"],
+			"js": ["jquery-2.1.4.min.js", "lpContent.js"]
+		},
+		{
+			"matches": ["*://docs.google.com/spreadsheets/*"],
+			"js": ["jquery-2.1.4.min.js", "docContent.js"]
+		}
+	],
+	
+	"icons": { 
+		"16": "icon16.png",
+		"48": "icon.png"
+	},
+	
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"contextMenus"
+	]
+
+	
+}
